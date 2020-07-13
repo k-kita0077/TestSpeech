@@ -36,4 +36,8 @@ class DateViewController: UIViewController, SpeechControllerDelegate {
     func getTextView() -> UITextView {
         return textView
     }
+    
+    func displayingView() -> UIViewController {
+        return self
+    }
 }

@@ -11,11 +11,13 @@ import UIKit
 import Speech
 import AVFoundation
 
-@objc protocol SpeechControllerDelegate: class {
+protocol SpeechControllerDelegate: class {
     //読み取り終了のキーワード
     func endWord() -> String
     //書き込まれるView
-    @objc optional func getTextView() -> UITextView
+    func getTextView() -> UITextView
+    //表示中のview
+    func displayingView() -> UIViewController
 }
 
 class SpeechController {
@@ -82,7 +84,7 @@ class SpeechController {
                 DispatchQueue.main.async {
                     let talkResult = result?.bestTranscription.formattedString
                     //文字起こし
-                    guard let textView = self.delegate?.getTextView!() else {return}
+                    guard let textView = self.delegate?.getTextView() else {return}
                     textView.text = talkResult
                     guard let endWord = self.delegate?.endWord() else {return}
                     //読み取った文字の中に”完了”があったら終了
@@ -93,7 +95,12 @@ class SpeechController {
                         let talkFlag = talkResultBody.distance(from: talkResultBody.startIndex, to: talkIndex!.lowerBound)
                         let talkValue = talkResultBody[talkResultBody.index(talkResultBody.startIndex, offsetBy: 0)..<talkResultBody.index(talkResultBody.startIndex, offsetBy: talkFlag)]
                         textView.text = String(talkValue)
-                        self.stopLiveTranscription()
+                        //確認画面へ
+                        let displayingView = self.delegate?.displayingView()
+                        let vc = DetailViewController()
+                        vc.detailtext = String(talkValue)
+                        displayingView?.navigationController?.pushViewController(vc, animated: true)
+                        
                         
                     }
                 }

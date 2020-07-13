@@ -37,5 +37,8 @@ class TextViewController: UIViewController, SpeechControllerDelegate {
         return textView
     }
  
+    func displayingView() -> UIViewController {
+        return self
+    }
 }
 

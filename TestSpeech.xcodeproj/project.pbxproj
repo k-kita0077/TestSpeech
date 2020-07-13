@@ -16,6 +16,8 @@
 		798048C924BB923600ED4781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798048C724BB923600ED4781 /* LaunchScreen.storyboard */; };
 		798048D524BB98DC00ED4781 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048D424BB98DC00ED4781 /* TextViewController.swift */; };
 		798048D724BB98ED00ED4781 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048D624BB98ED00ED4781 /* DateViewController.swift */; };
+		79E29DFC24BC789300E71FE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E29DFA24BC789300E71FE9 /* DetailViewController.swift */; };
+		79E29DFD24BC789300E71FE9 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E29DFB24BC789300E71FE9 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		798048CA24BB923600ED4781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		798048D424BB98DC00ED4781 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		798048D624BB98ED00ED4781 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		79E29DFA24BC789300E71FE9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		79E29DFB24BC789300E71FE9 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				798048BE24BB923400ED4781 /* SceneDelegate.swift */,
 				798048C224BB923400ED4781 /* Main.storyboard */,
 				798048D324BB989100ED4781 /* Controller */,
+				79E29DF924BC786300E71FE9 /* DetailViewController */,
 				798048D224BB987E00ED4781 /* DateViewController */,
 				798048D124BB986800ED4781 /* TextViewController */,
 				798048D024BB984800ED4781 /* ViewController */,
@@ -106,6 +111,15 @@
 				797494AE24BC581C003618C6 /* SpeechController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		79E29DF924BC786300E71FE9 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79E29DFA24BC789300E71FE9 /* DetailViewController.swift */,
+				79E29DFB24BC789300E71FE9 /* DetailViewController.xib */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +183,7 @@
 				798048C924BB923600ED4781 /* LaunchScreen.storyboard in Resources */,
 				798048C624BB923600ED4781 /* Assets.xcassets in Resources */,
 				798048C424BB923400ED4781 /* Main.storyboard in Resources */,
+				79E29DFD24BC789300E71FE9 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +200,7 @@
 				798048BF24BB923400ED4781 /* SceneDelegate.swift in Sources */,
 				798048D524BB98DC00ED4781 /* TextViewController.swift in Sources */,
 				797494AF24BC581C003618C6 /* SpeechController.swift in Sources */,
+				79E29DFC24BC789300E71FE9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
